@@ -14,12 +14,12 @@ pipeline {
                 // sh 'npm i'
             }
         }
-        stage('Build') {
-            steps {
+        //stage('Build') {
+        //    steps {
                 //sh 'npm run build'
-                bat '''npm run build'''
-            }
-        }
+        //        bat '''npm run build'''
+        //    }
+        //}
         stage('e2e Tests') {
             steps {
                 //sh 'npm run cypress:ci'
