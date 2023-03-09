@@ -25,7 +25,7 @@ pipeline {
                 //sh 'npm run cypress:ci'
                 //sh 'npx cypress run --spec "cypress/e2e/*"'
                 //bat '''npx cypress run --spec "cypress/e2e/*"'''
-                bat '''npx cypress run --spec "cypress/e2e/*"'''
+                bat '''npx cypress run --spec "cypress/e2e/*" --config videoRecording=false'''
             }
         }
         stage('Deploy') {
