@@ -10,18 +10,22 @@ pipeline {
     stages {
         stage('Dependencies') {
             steps {
-                sh 'npm i'
+                bat '''npm i'''
+                // sh 'npm i'
             }
         }
         stage('Build') {
             steps {
-                sh 'npm run build'
+                //sh 'npm run build'
+                bat '''npm run build'''
             }
         }
         stage('e2e Tests') {
             steps {
                 //sh 'npm run cypress:ci'
-                sh 'npx cypress run --spec "cypress/e2e/*"'
+                //sh 'npx cypress run --spec "cypress/e2e/*"'
+                //bat '''npx cypress run --spec "cypress/e2e/*"'''
+                bat '''npx cypress run --spec "cypress/e2e/*"'''
             }
         }
         stage('Deploy') {
